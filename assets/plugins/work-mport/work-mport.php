@@ -14,4 +14,3 @@ function linkbeans($text) {
 }
 
 add_filter('the_content',  'linkbeans');
-
