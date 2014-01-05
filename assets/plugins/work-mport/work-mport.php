@@ -9,9 +9,8 @@ Author URI: http://www.rezaur.com
 License: GPLv2
 */
 function linkbeans($text) {
-    $help = "<a href='http://www.netbeans.org'>NetBeans</a>";
-    return str_replace('NetBeans', $help, $text);
+    $help = "<a href='http://www.rezaur.com'>Rezaur</a>";
+    return str_replace('Rezaur', $help, $text);
 }
 
 add_filter('the_content',  'linkbeans');
-
