@@ -53,7 +53,7 @@ function wp_initial_constants() {
 	}
 
 	if ( !defined('WP_CONTENT_DIR') )
-		define( 'WP_CONTENT_DIR', ABSPATH . 'assets' ); // no trailing slash, full paths only - WP_CONTENT_URL is defined further down
+		define( 'WP_CONTENT_DIR', ABSPATH . 'wp-content' ); // no trailing slash, full paths only - WP_CONTENT_URL is defined further down
 
 	// Add define('WP_DEBUG', true); to wp-config.php to enable display of notices during development.
 	if ( !defined('WP_DEBUG') )
@@ -98,7 +98,7 @@ function wp_initial_constants() {
  */
 function wp_plugin_directory_constants() {
 	if ( !defined('WP_CONTENT_URL') )
-		define( 'WP_CONTENT_URL', get_option('siteurl') . '/assets'); // full url - WP_CONTENT_DIR is defined further up
+		define( 'WP_CONTENT_URL', get_option('siteurl') . '/wp-content'); // full url - WP_CONTENT_DIR is defined further up
 
 	/**
 	 * Allows for the plugins directory to be moved from the default location.
@@ -123,7 +123,7 @@ function wp_plugin_directory_constants() {
 	 * @deprecated
 	 */
 	if ( !defined('PLUGINDIR') )
-		define( 'PLUGINDIR', 'assets/plugins' ); // Relative to ABSPATH. For back compat.
+		define( 'PLUGINDIR', 'wp-content/plugins' ); // Relative to ABSPATH. For back compat.
 
 	/**
 	 * Allows for the mu-plugins directory to be moved from the default location.
@@ -160,7 +160,8 @@ function wp_plugin_directory_constants() {
 function wp_cookie_constants() {
 	/**
 	 * Used to guarantee unique hash cookies
-	 * @since 1.5
+	 *
+	 * @since 1.5.0
 	 */
 	if ( !defined( 'COOKIEHASH' ) ) {
 		$siteurl = get_site_option( 'siteurl' );
