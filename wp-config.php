@@ -13,7 +13,7 @@
  *
  * @package WordPress
  */
-
+define('FS_METHOD','direct');
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', 'wordpress');
@@ -70,6 +70,16 @@ $table_prefix  = 'wp_';
  * language support.
  */
 define('WPLANG', '');
+
+/* Custom WordPress URL. */
+define( 'WP_CONTENT_URL', '/assets' );
+define( 'UPLOADS',        '/assets/pub_files' );
+define( 'WP_PLUGIN_URL',  '/assets/plugins' );
+
+/* Compression */
+define( 'COMPRESS_CSS',        true );
+define( 'COMPRESS_SCRIPTS',    true );
+define( 'ENFORCE_GZIP',        true );
 
 /**
  * For developers: WordPress debugging mode.
